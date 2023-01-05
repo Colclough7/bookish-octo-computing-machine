@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #5372F0;
+}
+
+.wrapper{
+    width: 800px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px 30px 25px;
+}
+
+.wrapper header{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrapper .content{
+    margin: 35px  0;
+}
+
+.content .joke-area{
+    display: flex;
+    justify-content: center;
+}
+
+.joke p{
+    max-width:50ch;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    font-size: 18px;
+    word-wrap: normal;
+}
+.joke-area i{
+    font-size: 12px;
+}
+
+.joke-area i:first-child{
+    display: flex;
+    align-items: flex-start;
+    margin: 3px 10px 0 0;
+}
+
+.joke-area i:last-child{
+    margin: 0 0 3px 10px;
+}
+.joke-area .joke{
+    font-size: 12px;
+    text-align: center;
+    hyphens: auto;
+    
+}
+
+.content .joke-genre{
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+    font-style: italic; 
+    justify-content: flex-end;
+}
+
+.joke-genre span:first-child{
+    margin: -7px 5px 0 0;
+    font-family: monospace;
+}
+
+
+.wrapper .buttons{
+    border-top: 1px solid #ccc;
+}
+
+
+.buttons .features{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.features ul{
+    display: flex;
+}
+
+
+.features ul li{
+    list-style: none;
+    margin: 0 5px;
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+    border: 1px solid #5372F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5372F0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.features ul li:hover{
+    color: #fff;
+    background: #5372F0;
+}
+.features button{
+    border: none;
+    outline: none;
+    background: #5372F0;
+    padding: 10px 20px;
+    border-radius: 19px;
+    background-color: #5372F0;
+    color:#fff;
+    cursor: pointer;
+}
+
+.tooltip{
+    position: relative;
+}
+.toolTipText{
+    position: absolute;
+    left: 50%;
+    top:0;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: #000;
+    white-space: nowrap;
+    padding: 10px 15px;
+    border-radius: 7px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+}
+.toolTipText::before{
+    content:"";
+    position: absolute;
+    left: 50%;
+    top:100%;
+    transform: translateX(-50%);
+    border: 15px solid;
+    border-color: #000 #0000 #0000 #0000;
+}
+
+.tooltip:hover .toolTipText{
+    top: -150%;
+    opacity: 1;
+}
+
